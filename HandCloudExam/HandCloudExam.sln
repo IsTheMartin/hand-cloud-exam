@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsedCarsAPI", "UsedCarsAPI\UsedCarsAPI.csproj", "{21B0C3FB-229B-4287-9AD4-FAE5250DB25A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{DD89F68D-CA39-4769-B664-CB4CCE2C2ABA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnitTest", "xUnitTest\xUnitTest.csproj", "{74567C1C-E5BB-4868-A963-C88F23EC90FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{21B0C3FB-229B-4287-9AD4-FAE5250DB25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21B0C3FB-229B-4287-9AD4-FAE5250DB25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21B0C3FB-229B-4287-9AD4-FAE5250DB25A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD89F68D-CA39-4769-B664-CB4CCE2C2ABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD89F68D-CA39-4769-B664-CB4CCE2C2ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD89F68D-CA39-4769-B664-CB4CCE2C2ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD89F68D-CA39-4769-B664-CB4CCE2C2ABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74567C1C-E5BB-4868-A963-C88F23EC90FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74567C1C-E5BB-4868-A963-C88F23EC90FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74567C1C-E5BB-4868-A963-C88F23EC90FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74567C1C-E5BB-4868-A963-C88F23EC90FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
