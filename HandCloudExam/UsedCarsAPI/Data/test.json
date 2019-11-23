@@ -1,1 +1,20 @@
-[{"Id":1,"Model":"HR-V","Description":"Gray color","Year":2019,"Brand":"Honda","Kilometers":9000,"Price":315250.5}]
+[
+  {
+    "Id": 1,
+    "Model": "HR-V",
+    "Description": "Gray color",
+    "Year": 2019,
+    "Brand": "Honda",
+    "Kilometers": 9000,
+    "Price": 315250.5
+  },
+  {
+    "Id": 2,
+    "Model": "Elantra",
+    "Description": "Silver color",
+    "Year": 2017,
+    "Brand": "Hyundai",
+    "Kilometers": 21857,
+    "Price": 220900.57
+  }
+]

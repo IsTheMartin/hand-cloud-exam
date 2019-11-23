@@ -13,17 +13,17 @@ namespace UsedCarsAPI.Controllers
     [ApiController]
     public class UsedCarController : ControllerBase
     {
-        private readonly IUsedCarService usedCarService;
+        private readonly IUsedCarRepository repo;
 
-        public UsedCarController(IUsedCarService usedCarService)
+        public UsedCarController(IUsedCarRepository repo)
         {
-            this.usedCarService = usedCarService;
+            this.repo = repo;
         }
 
         [HttpGet("GetUsedCars")]
         public ActionResult<IList<Car>> GetAllUsedCars()
         {
-            IList<Car> carList = usedCarService.GetUsedCars();
+            IList<Car> carList = repo.GetAll();
             if (carList.Count > 0)
                 return carList.Select(x => x).ToList();
             return NoContent();
@@ -32,7 +32,7 @@ namespace UsedCarsAPI.Controllers
         [HttpGet("GetUsedCar")]
         public ActionResult<Car> GetUsedCar(int id)
         {
-            Car car = usedCarService.GetUsedCar(id);
+            Car car = repo.Get(id);
             if (car != null)
                 return car;
             return NotFound();
@@ -41,16 +41,16 @@ namespace UsedCarsAPI.Controllers
         [HttpPost("AddUsedCar")]
         public void AddUsedCar([FromBody] Car car)
         {
-            usedCarService.AddUsedCar(car);
-            usedCarService.SaveChanges();
+            repo.Add(car);
+            repo.Save();
         }
 
         [HttpDelete("DeleteUsedCar")]
         public ActionResult DeleteUsedCar(int id)
         {
-            if (usedCarService.DeleteUsedCar(id))
+            if (repo.Delete(id))
             {
-                usedCarService.SaveChanges();
+                repo.Save();
                 return Ok();
             }
             else
@@ -60,9 +60,9 @@ namespace UsedCarsAPI.Controllers
         [HttpPut("UpdateUsedCar")]
         public ActionResult<Car> UpdateUsedCar([FromBody] Car car)
         {
-            if (usedCarService.UpdateUsedCar(car) != null)
+            if (repo.Update(car) != null)
             {
-                usedCarService.SaveChanges();
+                repo.Save();
                 return car;
             }
             return NotFound();

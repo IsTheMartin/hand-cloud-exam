@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using UsedCarsAPI.Models;
 using UsedCarsAPI.Services;
 
 namespace UsedCarsAPI
@@ -40,6 +41,7 @@ namespace UsedCarsAPI
                    });
            });
             services.AddSingleton<IUsedCarService, UsedCarService>();
+            services.AddSingleton<IUsedCarRepository, UsedCarRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
