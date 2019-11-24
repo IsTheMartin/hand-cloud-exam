@@ -59,6 +59,7 @@ namespace UsedCarsAPI
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseCors();
         }
     }
 }

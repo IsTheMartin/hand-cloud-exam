@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using UsedCarsAPI.Models;
@@ -10,6 +11,7 @@ using UsedCarsAPI.Services;
 namespace UsedCarsAPI.Controllers
 {
     [Route("hc/[controller]")]
+    [EnableCors("Policy")]
     [ApiController]
     public class UsedCarController : ControllerBase
     {
@@ -39,10 +41,11 @@ namespace UsedCarsAPI.Controllers
         }
 
         [HttpPost("AddUsedCar")]
-        public void AddUsedCar([FromBody] Car car)
+        public ActionResult AddUsedCar([FromBody] Car car)
         {
             repo.Add(car);
             repo.Save();
+            return Ok();
         }
 
         [HttpDelete("DeleteUsedCar")]
