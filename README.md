@@ -5,4 +5,4 @@ Para ejecutar la WebAPI y el UI a la vez, entramos a las propiedades de la soluc
 
 Al ejecutar, notaremos que ambos proyectos inician en ventanas diferentes y podremos usarlas :D
 
-En caso de que el proyecto UI falle o no se comunique con la WebAPI, solo basta con modificar la url del HttpClient, que se encuentra en la clase Helper, este valor debe coincidir con la url de la WebAPI.
+En caso de que el proyecto UI falle o no se comunique con la WebAPI, solo basta con modificar la url del HttpClient, que se encuentra en la clase Helper, este valor debe coincidir con la url de la WebAPI. También modifica la url en el javascript site.js con la url de la WebAPI.
